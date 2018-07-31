@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Coffee Run</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form class="coffee-order-form container" action="" method="post">
+    <h1>Coffee Run</h1>
+    <div class="panel panel-default">
+        <div class="panel-body">
+        <label class="form-group">
+          Coffee Order
+          <input class="form-control" type="text" name="coffee" list="coffee_types">
+          <datalist id="coffee_types">
+            <option value="Espresso">
+            <option value="Latte">
+            <option value="Cappucino">
+            <option value="Machiatto">
+          </datalist>
+        </label>
+        <label class="form-group">
+          Email
+          <input class="form-control" type="email" name="email">
+        </label>
+        <label>
+          <input type="radio" name="size" value="short"> Short
+        </label>
+        <label>
+          <input type="radio" name="size" value="tall" checked> Tall
+        </label>
+        <label>
+          <input type="radio" name="size" value="grande"> Grande
+        </label>
+        <label class="form-group">
+          Flavor Shot
+          <select class="form-control" name="flavor">
+            <option value="none">None</option>
+            <option value="caramel">Caramel</option>
+            <option value="cinnamon">Cinnamon</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="hazelnut">Hazelnut</option>
+            <option value="vanilla">Vanilla</option>
+          </select>
+        </label>
+        <label class="form-group">
+          Caffeine Rating
+          <input class="form-control" type="range" name="caffeine" min="0" max="100" value="100">
+        </label>
+        <input type="submit" name="submit" value="get coffee">
+        <input type="reset" name="reset">
+      </div>
+    </div>
+  </form>
+  <script src="main.js"></script>
+</body>
+</html>
